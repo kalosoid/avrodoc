@@ -1,0 +1,41 @@
+diff a/app.js b/app.js	(rejected hunks)
+@@ -37,9 +37,36 @@ function getSchemata(source, cb) {
+           cb(err,schemata);
+         }
+         else {
+-          files.sort().forEach(function (file) {
+-              schemata.push({filename: '/schemata/' + file});
+-            });
++          // files.sort().forEach(function (file) {
++          //     schemata.push({filename: '/schemata/' + file});
++          //   });
++          schemata.push({filename: '/schemata/common/app.avsc'});
++schemata.push({filename: '/schemata/common/browser.avsc'});
++schemata.push({filename: '/schemata/common/dateTime.avsc'});
++schemata.push({filename: '/schemata/common/deviceInfo.avsc'});
++schemata.push({filename: '/schemata/common/download.avsc'});
++schemata.push({filename: '/schemata/common/duration.avsc'});
++schemata.push({filename: '/schemata/common/email.avsc'});
++schemata.push({filename: '/schemata/common/eventType.avsc'});
++schemata.push({filename: '/schemata/common/exitLinks.avsc'});
++schemata.push({filename: '/schemata/common/forms.avsc'});
++schemata.push({filename: '/schemata/common/funnel.avsc'});
++schemata.push({filename: '/schemata/common/geofence.avsc'});
++schemata.push({filename: '/schemata/common/identity.avsc'});
++schemata.push({filename: '/schemata/common/internalSearch.avsc'});
++schemata.push({filename: '/schemata/common/iot.avsc'});
++schemata.push({filename: '/schemata/common/location.avsc'});
++schemata.push({filename: '/schemata/common/media.avsc'});
++schemata.push({filename: '/schemata/common/mobile.avsc'});
++schemata.push({filename: '/schemata/common/page.avsc'});
++
++// page.avsc visit.avsc product.avsc promotions.avsc eComerce.avsc enhanceEvent.avsc
++
++schemata.push({filename: '/schemata/common/visit.avsc'});
++schemata.push({filename: '/schemata/common/product.avsc'});
++schemata.push({filename: '/schemata/common/promotions.avsc'});
++schemata.push({filename: '/schemata/common/eComerce.avsc'});
++schemata.push({filename: '/schemata/events/enhanceEvent.avsc'});
+           cb(null,schemata);
+         }
+     });

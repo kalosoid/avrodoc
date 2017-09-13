@@ -144,7 +144,7 @@ AvroDoc.Schema = function (avrodoc, shared_types, schema_json, filename) {
         if (_(primitive_types).contains(name)) {
             return decorate({type: name});
         }
-        var type = named_types[qualifiedName(name, namespace)];
+        var type = named_types[qualifiedName(name, namespace)]|| shared_types[qualifiedName(name, namespace)];
         if (type) {
             return type;
         } else {
